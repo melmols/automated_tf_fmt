@@ -3,11 +3,11 @@ data "github_repositories" "Terraform" {
 }
 
 resource "github_organization_webhook" "Deliveroo" {
-  name = "web"
+  name = "roo"
 
   configuration {
     url          = "https://google.de/"
     content_type = "form"
-     insecure_ssl = false
+      insecure_ssl = false
   }
 }
