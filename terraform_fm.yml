@@ -2,10 +2,10 @@ name: FMT
 on:
   push:
     branches:
-      - testing
+      - actions-test
   pull_request:
     branches:
-      - master
+      - testing
 jobs:
   linux:
     name: Linux build on node ${{ matrix.node_version }}
