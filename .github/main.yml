@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - actions-test
+      - testing
   pull_request:
     branches:
       - testing
+      - actions-test
 jobs:
   linux:
     name: Linux build on node ${{ matrix.node_version }}
