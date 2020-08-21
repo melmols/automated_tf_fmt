@@ -1,13 +1,6 @@
 name: Terraform_fmt_check
-on:
-  push:
-    branches:
-      - actions-test
-      - testing
-  pull_request:
-    branches:
-      - testing
-      - actions-test
+on: push
+
 jobs:
   linux:
     name: Linux build on node ${{ matrix.node_version }}
@@ -30,3 +23,12 @@ jobs:
 
     - name: Run Terraform fmt on push or PR
       run: ./.github/workflows/scripts/terraform_fmt.sh
+    - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Your Name
+          author_email: mail@example.com
+          message: "fmt code"
+          add: "*.tf"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
