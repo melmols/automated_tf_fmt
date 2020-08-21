@@ -3,7 +3,7 @@ data "github_repositories" "Terraform" {
 }
 
 resource "github_organization_webhook" "Deliveroo" {
-  name = "roo"
+  name = "testing"
 
   configuration {
     url          = "https://google.de/"
