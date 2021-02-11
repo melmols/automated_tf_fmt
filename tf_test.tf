@@ -1,5 +1,5 @@
 data "github_repositories" "Terraform" {
-  query = "org:Deliveroo language:Terraform"
+  query = "org:"" language:Terraform"
 }
 
 resource "github_organization_webhook" "Deliveroo" {
