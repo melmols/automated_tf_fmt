@@ -2,7 +2,7 @@ data "github_repositories" "Terraform" {
   query = "org:"" language:Terraform"
 }
 
-resource "github_organization_webhook" "Deliveroo" {
+resource "github_organization_webhook" "" {
   name = "testing"
 
   configuration {
